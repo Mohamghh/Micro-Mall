@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.example.orders.DTO.ProducttDTO;
 
 import java.time.LocalDateTime;
 
@@ -25,4 +26,7 @@ public class Order {
     private Integer quantity;
     private Double totalPrice;
     private LocalDateTime orderDate;
+
+    @Transient
+    private ProducttDTO product;
 }

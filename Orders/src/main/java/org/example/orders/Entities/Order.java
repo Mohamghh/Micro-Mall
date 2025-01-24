@@ -1,6 +1,8 @@
 package org.example.orders.Entities;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -26,6 +28,7 @@ public class Order {
     private Integer quantity;
     private Double totalPrice;
     private LocalDateTime orderDate;
+
 
     @Transient
     private ProducttDTO product;
